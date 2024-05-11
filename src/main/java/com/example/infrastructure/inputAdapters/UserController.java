@@ -2,7 +2,7 @@ package com.example.infrastructure.inputAdapters;
 
 import com.example.infrastructure.inputAdapters.dto.ResponseDto;
 import com.example.infrastructure.inputAdapters.dto.RequestDto;
-import com.example.infrastructure.inputPorts.UserInputPort;
+import com.example.infrastructure.inputPorts.IUser;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -25,17 +25,17 @@ public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    private final UserInputPort userInputPort;
+    private final IUser IUser;
 
     @Autowired
-    public UserController(UserInputPort userInputPort) {
-        this.userInputPort = userInputPort;
+    public UserController(IUser IUser) {
+        this.IUser = IUser;
     }
 
     @GetMapping
     @Operation(summary = "Get all users", description = "Get all users")
     public ResponseEntity<ResponseDto> getAllUsers() {
-        var users = this.userInputPort.getAllUsers();
+        var users = this.IUser.getAllUsers();
         if (users == null) {
             logger.warn("Users not found");
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -52,7 +52,7 @@ public class UserController {
     @PostMapping
     @Operation(summary = "Create user", description = "Create user")
     public ResponseEntity<ResponseDto> createUser(@RequestBody RequestDto requestDto) {
-        var user = this.userInputPort.createUser(requestDto);
+        var user = this.IUser.createUser(requestDto);
         if (user != null) {
             logger.info("User created: {}", user.getId());
             return new ResponseEntity<>(ResponseDto.builder()
@@ -69,7 +69,7 @@ public class UserController {
     @GetMapping("/{userId}")
     @Operation(summary = "Find user", description = "Find user by user Id")
     public ResponseEntity<ResponseDto> getUser(@PathVariable Long userId) {
-        var user = this.userInputPort.getUserById(blindLong(userId));
+        var user = this.IUser.getUserById(blindLong(userId));
         if (user != null) {
             logger.info("User found: {}", user.getId());
             return new ResponseEntity<>(ResponseDto.builder()
@@ -86,7 +86,7 @@ public class UserController {
     @PatchMapping("/{userId}")
     @Operation(summary = "Update user", description = "Update user by user Id")
     public ResponseEntity<ResponseDto> updateUser(@PathVariable Long userId, @RequestBody RequestDto requestDto) {
-        var user = this.userInputPort.updateUser(blindLong(userId), requestDto);
+        var user = this.IUser.updateUser(blindLong(userId), requestDto);
         if (user != null) {
             logger.info("User updated: {}", user.getId());
             return new ResponseEntity<>(ResponseDto.builder()
@@ -103,7 +103,7 @@ public class UserController {
     @DeleteMapping("/{userId}")
     @Operation(summary = "Delete user", description = "Delete user by user Id")
     public ResponseEntity<ResponseDto> deleteUser(@PathVariable Long userId) {
-        var user = this.userInputPort.deleteUser(blindLong(userId));
+        var user = this.IUser.deleteUser(blindLong(userId));
         if (user != null) {
             logger.info("User deleted: {}", user.getId());
             return new ResponseEntity<>(ResponseDto.builder()

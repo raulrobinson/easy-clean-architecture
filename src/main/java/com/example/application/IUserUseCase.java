@@ -2,7 +2,7 @@ package com.example.application;
 
 import com.example.domain.entities.UserDomain;
 import com.example.infrastructure.inputAdapters.dto.RequestDto;
-import com.example.infrastructure.inputPorts.UserInputPort;
+import com.example.infrastructure.inputPorts.IUser;
 import com.example.infrastructure.outputPorts.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +15,12 @@ import static com.example.common.utils.Shield.blindStr;
 import static com.example.infrastructure.mappers.UserMapper.ToDomainFromDto;
 
 @Component
-public class UserUseCase implements UserInputPort {
+public class IUserUseCase implements IUser {
 
     private final UserRepository repository;
 
     @Autowired
-    public UserUseCase(UserRepository repository) {
+    public IUserUseCase(UserRepository repository) {
         this.repository = repository;
     }
 

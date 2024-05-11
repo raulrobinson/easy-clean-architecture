@@ -5,7 +5,7 @@ import com.example.infrastructure.inputAdapters.dto.RequestDto;
 
 import java.util.List;
 
-public interface UserInputPort {
+public interface IUser {
     List<UserDomain> getAllUsers();
     UserDomain getUserById(Long userId);
     UserDomain deleteUser(Long userId);

@@ -2,6 +2,8 @@
 
 This is a simple example of how to implement the Clean Architecture Pattern in Spring Boot.
 
+![clean-architecture.png](clean-architecture.png)
+
 ## Technologies
 - Java 17
 - Spring Boot 3.2.5
