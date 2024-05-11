@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "a573554c-6748-44bd-895f-cb2cfad2176c",
+		"name": "easy-clean-architecture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12090918"
+	},
+	"item": [
+		{
+			"name": "All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/v1/easy-clean-architecture/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"easy-clean-architecture",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*",
+						"uuid": "0ea8e125-f80c-4dc8-bf58-8401c7e4eb89"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "b296ad0d-f5af-4564-af96-587306d1136e"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Raul Bolivar\",\n  \"country\": \"Colombia\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/v1/easy-clean-architecture/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"easy-clean-architecture",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find User by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*",
+						"uuid": "03678b4a-4327-459e-84b5-c09e67b973b3"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/api/v1/easy-clean-architecture/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"easy-clean-architecture",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*",
+						"uuid": "6449ce1d-ce9f-496d-9e35-0109d098ac80"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"uuid": "02115d80-5044-494d-99bb-5608e209bd04"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Raul Bolivar\",\n  \"country\": \"Canada\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/v1/easy-clean-architecture/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"easy-clean-architecture",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*",
+						"uuid": "15ac2ff6-8f16-4619-9077-d8372f22060c"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/api/v1/easy-clean-architecture/users/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"v1",
+						"easy-clean-architecture",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
