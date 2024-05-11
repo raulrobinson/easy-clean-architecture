@@ -27,7 +27,14 @@ mvn clean install
 mvn spring-boot:run
 ```
 
+### Swagger
+```shell
+http://localhost:8085/swagger-ui/index.html
+```
+
 ## Endpoints
+
+Postman Collection: [Easy Clean Architecture Pattern]
 
 ---
 **@rasysbox** | Raul Bolivar Navas | 2024.

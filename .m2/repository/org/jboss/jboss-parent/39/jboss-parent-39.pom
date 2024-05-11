@@ -825,7 +825,7 @@
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-deploy-plugin</artifactId>
               <configuration>
-                <updateReleaseInfo>true</updateReleaseInfo>
+                <!--<updateReleaseInfo>true</updateReleaseInfo>-->
               </configuration>
             </plugin>
             <plugin>
@@ -955,10 +955,10 @@
                                 </goals>
                                 <configuration>
                                     <release>8</release>
-                                    <additionalClasspathElements>
+                                    <!--<additionalClasspathElements>
                                         <additionalClasspathElement>${project.build.directory}/jdk-misc.jar
                                         </additionalClasspathElement>
-                                    </additionalClasspathElements>
+                                    </additionalClasspathElements>-->
                                 </configuration>
                             </execution>
                         </executions>
@@ -1037,10 +1037,10 @@
                                     <compileSourceRoots>${project.basedir}/src/main/java9</compileSourceRoots>
                                     <outputDirectory>${project.build.directory}/classes/META-INF/versions/9
                                     </outputDirectory>
-                                    <additionalClasspathElements>
+                                    <!--<additionalClasspathElements>
                                         <additionalClasspathElement>${project.build.outputDirectory}
                                         </additionalClasspathElement>
-                                    </additionalClasspathElements>
+                                    </additionalClasspathElements>-->
                                 </configuration>
                             </execution>
                         </executions>
@@ -1132,13 +1132,13 @@
                                     <compileSourceRoots>${project.basedir}/src/main/java10</compileSourceRoots>
                                     <outputDirectory>${project.build.directory}/classes/META-INF/versions/10
                                     </outputDirectory>
-                                    <additionalClasspathElements>
+                                    <!--<additionalClasspathElements>
                                         <additionalClasspathElement>
                                             ${project.build.directory}/classes/META-INF/versions/9
                                         </additionalClasspathElement>
                                         <additionalClasspathElement>${project.build.outputDirectory}
                                         </additionalClasspathElement>
-                                    </additionalClasspathElements>
+                                    </additionalClasspathElements>-->
                                 </configuration>
                             </execution>
                         </executions>
@@ -1233,7 +1233,7 @@
                                     <compileSourceRoots>${project.basedir}/src/main/java11</compileSourceRoots>
                                     <outputDirectory>${project.build.directory}/classes/META-INF/versions/11
                                     </outputDirectory>
-                                    <additionalClasspathElements>
+                                    <!--<additionalClasspathElements>
                                         <additionalClasspathElement>
                                             ${project.build.directory}/classes/META-INF/versions/10
                                         </additionalClasspathElement>
@@ -1242,7 +1242,7 @@
                                         </additionalClasspathElement>
                                         <additionalClasspathElement>${project.build.outputDirectory}
                                         </additionalClasspathElement>
-                                    </additionalClasspathElements>
+                                    </additionalClasspathElements>-->
                                 </configuration>
                             </execution>
                         </executions>
@@ -1340,7 +1340,7 @@
                                     <compileSourceRoots>${project.basedir}/src/main/java12</compileSourceRoots>
                                     <outputDirectory>${project.build.directory}/classes/META-INF/versions/12
                                     </outputDirectory>
-                                    <additionalClasspathElements>
+                                    <!--<additionalClasspathElements>
                                         <additionalClasspathElement>
                                             ${project.build.directory}/classes/META-INF/versions/11
                                         </additionalClasspathElement>
@@ -1352,7 +1352,7 @@
                                         </additionalClasspathElement>
                                         <additionalClasspathElement>${project.build.outputDirectory}
                                         </additionalClasspathElement>
-                                    </additionalClasspathElements>
+                                    </additionalClasspathElements>-->
                                 </configuration>
                             </execution>
                         </executions>
@@ -1453,7 +1453,7 @@
                                     <compileSourceRoots>${project.basedir}/src/main/java13</compileSourceRoots>
                                     <outputDirectory>${project.build.directory}/classes/META-INF/versions/13
                                     </outputDirectory>
-                                    <additionalClasspathElements>
+                                    <!--<additionalClasspathElements>
                                         <additionalClasspathElement>
                                             ${project.build.directory}/classes/META-INF/versions/12
                                         </additionalClasspathElement>
@@ -1468,7 +1468,7 @@
                                         </additionalClasspathElement>
                                         <additionalClasspathElement>${project.build.outputDirectory}
                                         </additionalClasspathElement>
-                                    </additionalClasspathElements>
+                                    </additionalClasspathElements>-->
                                 </configuration>
                             </execution>
                         </executions>
