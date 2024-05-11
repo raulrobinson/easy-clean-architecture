@@ -1,0 +1,44 @@
+# ---------------------------------
+# --- APP General Configuration ---
+# ---------------------------------
+springdoc:
+  server:
+    address: localhost
+    port: 8085
+server:
+  port: 8085
+logging:
+  level:
+    org:
+      springframework:
+        security:
+          web.*: debug
+
+# ------------------------------------------------------------------------------------------------
+# --- Database (secret-cnx-db) ---
+# docker run --name rasysbox-postgres -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres
+# docker exec -it rasysbox-postgres psql -U postgres
+# CREATE DATABASE rasysbox;
+# \c rasysbox;
+# CREATE SCHEMA app;
+# GRANT USAGE, CREATE ON SCHEMA app TO postgres;
+# \q
+# ------------------------------------------------------------------------------------------------
+spring:
+  sql:
+    init:
+      platform: postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rasysbox
+    username: test
+    password: test
+    hikari:
+      maximum-pool-size: 1
+      minimum-idle: 1
+      maxLifetime: 600000
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+

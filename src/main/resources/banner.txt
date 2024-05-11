@@ -1,0 +1,13 @@
+${AnsiColor.BLUE}
+   ███████▄
+   ███   ▀██▄                                                   ███
+   ███    ███    ▄██████▄   ▄███████▄   ███   ███   ▄███████▄   ███ ▄▄▄▄       ▄█████▄    ███       ███
+   ███   ▄██▀   ▀▀    ███  ███▀    ▀▀▀  ███   ███  ███▀    ▀▀▀  ████▀▀▀██▄   ▄██▀   ▀██▄   ▀██▄   ▄██▀
+   ███████▄    ▄██▀▀▀▀███   ▀███████▄    ▀███████   ▀███████▄   ███     ███  ███     ███    ███▄▄▄███
+   ███   ▀██▄  ███▄  ▄███  ▄▄▄    ▄███  ▄▄▄   ███  ▄▄▄    ▄███  ███▄   ▄██▀  ▀██▄   ▄██▀   ▄██▀   ▀██▄
+   ███    ███   ▀█████▀██   ▀███████▀    ▀█████▀    ▀███████▀   ███▀█████▀     ▀█████▀    ███       ███
+${AnsiColor.DEFAULT}
+ :: ${AnsiColor.GREEN}Spring Boot Version${AnsiColor.DEFAULT} :: ${spring-boot.version}
+ :: ${AnsiColor.GREEN}OpenJDK Version${AnsiColor.DEFAULT} :: ${java.version}
+ :: ${AnsiColor.BRIGHT_GREEN}Module Name${AnsiColor.DEFAULT} :: ${spring.application.name}
+ :: ${AnsiColor.BLUE}${springdoc.properties.organization-url}${AnsiColor.DEFAULT} :: ${springdoc.properties.developer-name}
