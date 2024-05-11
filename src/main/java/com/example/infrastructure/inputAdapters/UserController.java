@@ -36,7 +36,7 @@ public class UserController {
     @Operation(summary = "Get all users", description = "Get all users")
     public ResponseEntity<ResponseDto> getAllUsers() {
         var users = this.userInputPort.getAllUsers();
-        if (users.isEmpty()) {
+        if (users == null) {
             logger.warn("Users not found");
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
