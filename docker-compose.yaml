@@ -1,0 +1,38 @@
+#version: '3.8'
+
+services:
+
+  springboot:
+    build: .
+    container_name: easy-clean-architecture
+    restart: always
+    ports:
+      - "8085:8085"
+    environment:
+      SPRING_APPLICATION_JSON: '{
+        "spring.profiles.active" : "docker"
+      }'
+    volumes:
+      - .m2:/root/.m2
+    stdin_open: true
+    tty: true
+    networks:
+      - bridge
+
+  postgres:
+    image: postgres:15.2-alpine3.17
+    container_name: rasysbox-postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=rasysbox
+      - SCHEMA=public
+    ports:
+      - "5432:5432"
+    networks:
+      - bridge
+
+networks:
+    bridge:
+        driver: bridge
